@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Lab specific
+logs/
+*.evtx
+*.db
+campaigns/
+payloads/generated/
+payloads/obfuscated/
+payloads/packaged/
+
+# VM files
+lab_vm/*.vmx
+lab_vm/*.vmdk
+lab_vm/*.vmem
+
+# IDE
+.vscode/
+.idea/
+*.swp

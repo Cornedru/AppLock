@@ -1,0 +1,32 @@
+[
+    {
+        "binary": "cmstp.exe",
+        "technique": "cmstp",
+        "path": "C:\\Windows\\System32\\cmstp.exe"
+    },
+    {
+        "binary": "cscript.exe",
+        "technique": "cscript",
+        "path": "C:\\Windows\\System32\\cscript.exe"
+    },
+    {
+        "binary": "mshta.exe",
+        "technique": "mshta",
+        "path": "C:\\Windows\\System32\\mshta.exe"
+    },
+    {
+        "binary": "regsvr32.exe",
+        "technique": "regsvr32",
+        "path": "C:\\Windows\\System32\\regsvr32.exe"
+    },
+    {
+        "binary": "rundll32.exe",
+        "technique": "rundll32",
+        "path": "C:\\Windows\\System32\\rundll32.exe"
+    },
+    {
+        "binary": "wscript.exe",
+        "technique": "wscript",
+        "path": "C:\\Windows\\System32\\wscript.exe"
+    }
+]

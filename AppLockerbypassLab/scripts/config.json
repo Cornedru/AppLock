@@ -1,0 +1,20 @@
+{
+  "lab": {
+    "name": "AppLockerBypassLab",
+    "version": "1.0.0",
+    "vm_path": "lab_vm/snapshot.vmx"
+  },
+  "sysmon": {
+    "config": "https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml",
+    "enabled": true
+  },
+  "applocker": {
+    "mode": "audit",
+    "rules": []
+  },
+  "dashboard": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": true
+  }
+}
