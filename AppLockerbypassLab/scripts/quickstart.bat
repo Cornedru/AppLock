@@ -5,20 +5,20 @@ echo ============================================
 echo.
 
 echo [1] Telecharger les payloads
-python download_payloads.py
+python scripts\download_payloads.py
 echo.
 
 echo [2] Generer les payloads personnalises
-python generate_payloads.py
+python scripts\generate_payloads.py
 echo.
 
 echo [3] Lancer le dashboard
-start python dashboard.py
+start python scripts\dashboard.py
 echo Dashboard demarre sur http://localhost:5000
 echo.
 
 echo [4] Creer une campagne de test
-python campaign_manager.py new "Test Initial" "Premiere campagne"
+python scripts\campaign_manager.py new "Test Initial" "Premiere campagne"
 echo.
 
 echo ============================================

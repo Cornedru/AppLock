@@ -77,10 +77,7 @@ class CampaignManager:
         c = conn.cursor()
         
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        c.execute("""
-            INSERT INTO campaigns (name, description, start_time, status)
-            VALUES (?, ?, ?, 'running')
-        """, (name, description, timestamp))
+        c.execute(""" INSERT INTO campaigns (name, description, start_time, status) VALUES (?, ?, ?, 'running') """, (name, description, timestamp))
         
         campaign_id = c.lastrowid
         conn.commit()
@@ -321,24 +318,34 @@ class CampaignManager:
     # ═══════════════════════════════════════════════════════
     
     def list_campaigns(self):
-        """Liste toutes les campagnes"""
-        conn = sqlite3.connect(self.db_file)
-        c = conn.cursor()
-        c.execute("SELECT * FROM campaigns ORDER BY id DESC")
-        campaigns = c.fetchall()
-        conn.close()
-        
-        print("\n📋 Campagnes de Tests")
-        print("="*80)
-        print(f"{'ID':<5} {'Nom':<25} {'Statut':<12} {'Tests':<8} {'Bypass':<8} {'Taux'}")
-        print("-"*80)
-        
-        for camp in campaigns:
-            cid, name, desc, start, end, status, total, bypasses, blocked = camp
-            rate = f"{(bypasses/total*100 if total>0 else 0):.1f}%" if status == 'completed' else "N/A"
-            print(f"{cid:<5} {name:<25} {status:<12} {total:<8} {bypasses:<8} {rate}")
-        
-        print("="*80)
+    	"""Liste toutes les campagnes"""
+    	conn = sqlite3.connect(self.db_file)
+    	c = conn.cursor()
+    	c.execute("SELECT * FROM campaigns ORDER BY id DESC")
+    	campaigns = c.fetchall()
+    	conn.close()
+    
+    	print("\n📋 Campagnes de Tests")
+    	print("="*80)
+    	print(f"{'ID':<5} {'Nom':<25} {'Statut':<12} {'Tests':<8} {'Bypass':<8} {'Taux'}")
+    	print("-"*80)
+    
+    	for camp in campaigns:
+        	# On vérifie si le nombre de colonnes est bien égal à 9
+        	if len(camp) == 9:
+                    cid, name, desc, start, end, status, total, bypasses, blocked = camp
+                    rate = f"{(bypasses/total*100 if total>0 else 0):.1f}%" if status == 'completed' else "N/A"
+                    print(f"{cid:<5} {name:<25} {status:<12} {total:<8} {bypasses:<8} {rate}")
+	        else:
+        	    print(f"⚠️  Campagne ID {camp[0]} (Nom: {camp[1]}) : Données manquantes")
+    
+    	print("="*80)
+
+
+
+
+
+
 
 
 # ═══════════════════════════════════════════════════════
